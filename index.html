@@ -1,15 +1,30 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
 <head>
-  <meta charset="utf-8">
-<title>Form</title>
+<title>Форма обратной связи на PHP с отправкой на почту</title>
 </head>
 <body>
-<form action="submit.php" method="POST">
-<input  name="email" placeholder="Email"><br/>
-<input  name="name"  placeholder="Name"><br/>
-<textarea name="message" placeholder="Enter your message" rows="8" cols="80"></textarea><br/>
-<input type="submit" value="send">
-</form>
+ <h2>Форма обратной связи на PHP</h2>
+ <!--Данные введенные пользователем обрабатываются кодом в mail.php-->
+ <form action="./mail.php" method="post">
+ <!--Тег используется для группировки связанных элементов в форме-->
+ <fieldset>
+ <!--Тег задает заголовок для групповых элементов-->
+ <legend>Оставьте сообщение:</legend>
+ Ваше имя:
+ <!--Устанавливает однострочное текстовое поле ввода:-->
+ <input type="text" name="name"></br>
+ <!--Используется для полей ввода, которые должны содержать адрес электронной почты.-->
+ E-mail:
+ <input type="text" name="email"></br>
+ Номер телефона:
+ <input type="text" name="phone"></br>
+ Сообщение:
+ <!--Тег разрешает многострочный ввод текста.-->
+ <textarea rows="10" cols="45" name="message"></textarea></br>
+ <!--Устанавливает кнопку для отправки данных формы в обработчик формы.-->
+ <input type="submit" value="Отправить сообщение"></br>
+ </fieldset>
+ </form>
 </body>
 </html>
